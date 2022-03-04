@@ -48,7 +48,7 @@ export const DayPicker = ({
 
   const isSmartphoneFormat = useBreakpointValue({ base: true, sm: false });
 
-  const formatDate = (date, format) => dayjs(date).format(format);
+  const formatDate = (date: Date, format: string) => dayjs(date).format(format);
 
   const parseDate = (str: string, format: string) => {
     const parsed = dayjs(str, format).toDate();

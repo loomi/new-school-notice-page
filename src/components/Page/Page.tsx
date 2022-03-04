@@ -1,10 +1,10 @@
 import { Box, Button } from '@chakra-ui/react';
 import { ReactNode, useEffect, useRef } from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
-import { useLocation, useNavigate } from 'react-router-dom';
 
 import { MotionBox } from '@/components/common/MotionBox';
 import { Head } from '@/components/Head';
+import { useRouter } from 'next/router';
 
 type PageProps = {
   children: ReactNode;
@@ -13,8 +13,7 @@ type PageProps = {
 };
 
 export const Page = ({ children, withBackButton = false, title, ...restProps }: PageProps) => {
-  const navigate = useNavigate();
-  const { pathname } = useLocation();
+  const router = useRouter()
   const pageRef = useRef<HTMLDivElement>(null);
 
   const container = {
@@ -28,10 +27,10 @@ export const Page = ({ children, withBackButton = false, title, ...restProps }: 
   };
 
   useEffect(() => {
-    if (pathname && pageRef) {
+    if (router.pathname && pageRef) {
       pageRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [pathname]);
+  }, [router.pathname]);
 
   return (
     <MotionBox
@@ -54,7 +53,7 @@ export const Page = ({ children, withBackButton = false, title, ...restProps }: 
           zIndex="1000"
           leftIcon={<IoIosArrowBack />}
           variant="primaryLighter"
-          onClick={() => navigate(-1)}
+          onClick={() => router.back()}
         >
           Voltar
         </Button>

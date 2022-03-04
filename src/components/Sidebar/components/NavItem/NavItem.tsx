@@ -5,7 +5,7 @@ import { chakra } from '@chakra-ui/system';
 import { IconType } from 'react-icons';
 import { useLocation } from 'react-router-dom';
 
-import { Link } from '@/components/common/Link';
+import Link from 'next/link';
 
 import { useSidebar } from '../../store/sidebar';
 
@@ -37,7 +37,8 @@ export const NavItem = ({ icon, count, to, name }: NavItemP) => {
 
   return (
     <Center>
-      <Box as={Link} to={to || ''} ml="auto" mr="auto" w="90%" onClick={handleNavClick}>
+      <Link href={to || ''}> 
+      <Box ml="auto" mr="auto" w="90%" onClick={handleNavClick}>
         <Stack
           direction="row"
           cursor="pointer"
@@ -78,6 +79,7 @@ export const NavItem = ({ icon, count, to, name }: NavItemP) => {
           )}
         </Stack>
       </Box>
+      </Link>
     </Center>
   );
 };

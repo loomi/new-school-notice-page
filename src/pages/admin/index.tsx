@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { GetServerSideProps } from 'next';
-import { Box } from '@chakra-ui/react';
+import { Dashboard } from '@/modules/dashboard';
 
 const Home: React.FC = (props) => {
-  return <Box>Home page</Box>;
+  return <Dashboard />;
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
