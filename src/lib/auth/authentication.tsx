@@ -11,14 +11,15 @@ import {
 } from '@/modules/auth';
 import { storage, cookies } from '@/utils';
 
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 import { initReactQueryAuth } from './context';
 
 function handleUserResponse(data: UserResponse) {
-  const { accessToken, user } = data;
+  const { accessToken, user, refreshToken } = data;
   storage.setUser(user);
   cookies.setAccess(accessToken);
+  cookies.setRefresh(refreshToken);
   return user;
 }
 

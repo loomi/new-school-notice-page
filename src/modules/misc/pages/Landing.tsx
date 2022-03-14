@@ -88,7 +88,7 @@ export const Landing = () => {
               for Loomi.
             </Heading>
             <LC.Horizontal mt={20} spacing={20} center>
-              <Link href="/login">
+              <Link href="/admin">
               <Button
                 variant="solid"
                 colorScheme="brand"
