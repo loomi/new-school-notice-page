@@ -8,6 +8,7 @@ const Home: React.FC = (props) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
+  // get initial props to render something
   return { props: {} };
 };
 
