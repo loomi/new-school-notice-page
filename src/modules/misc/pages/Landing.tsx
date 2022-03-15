@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import { Button, Heading, Text, Image, VisuallyHidden, Box, chakra } from '@chakra-ui/react';
 import { css } from '@emotion/react';
+import Link from 'next/link';
 import Parallax from 'parallax-js';
 import { useEffect, useRef } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { BsArrowRightShort } from 'react-icons/bs';
-import Link from 'next/link'
 
 import detailAstronaut from '@/assets/detail-astronaut.png';
 import detailBallBlack from '@/assets/detail-ball-black.png';
@@ -15,7 +15,6 @@ import reactLeapLetter from '@/assets/react-leap-letter.png';
 import { Logo } from '@/components/common/Logo';
 import { Head } from '@/components/Head';
 import * as LC from '@/components/LC';
-
 
 export const Landing = () => {
   const sceneEl = useRef(null);
@@ -86,20 +85,20 @@ export const Landing = () => {
               for Loomi.
             </Heading>
             <LC.Horizontal mt={20} spacing={20} center>
-              <Link href="/admin">
-              <Button
-                variant="solid"
-                colorScheme="brand"
-                display="inline-flex"
-                alignItems="center"
-                justifyContent="center"
-                w={{ base: 'full', sm: 'auto' }}
-                mb={{ base: 2, sm: 0 }}
-                size="lg"
-                rightIcon={<BsArrowRightShort />}
-              >
-                Get Started
-              </Button>
+              <Link href="/admin" passHref>
+                <Button
+                  variant="solid"
+                  colorScheme="brand"
+                  display="inline-flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  w={{ base: 'full', sm: 'auto' }}
+                  mb={{ base: 2, sm: 0 }}
+                  size="lg"
+                  rightIcon={<BsArrowRightShort />}
+                >
+                  Get Started
+                </Button>
               </Link>
               <Button
                 as="a"
@@ -135,7 +134,7 @@ export const Landing = () => {
           />
           <Image
             data-depth=".3"
-            src={detailBallPink.src }
+            src={detailBallPink.src}
             alt="image bg"
             maxW="lg"
             pos="absolute"

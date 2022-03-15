@@ -13,7 +13,7 @@ export const Sidebar = () => {
   const {
     state: { isOpen },
     actions: { toggleSidebar },
-  } = useSidebar();
+  } = useSidebar() as any;
   const [isSmallScreen] = useMediaQuery('(max-width: 860px)');
 
   useOutsideClick({

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import { IconButton } from '@chakra-ui/button';
 import Icon from '@chakra-ui/icon';
 import { Box, Center, useMediaQuery } from '@chakra-ui/react';

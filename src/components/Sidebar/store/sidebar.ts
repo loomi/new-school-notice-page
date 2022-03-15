@@ -32,4 +32,4 @@ const store: StateCreator<Sidebar> = (set) => ({
   },
 });
 
-export const useSidebar = createStore(store);
+export const useSidebar = createStore(store as any);

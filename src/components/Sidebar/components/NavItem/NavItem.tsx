@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import Icon from '@chakra-ui/icon';
 import { BoxProps, Spacer, Stack, Text } from '@chakra-ui/layout';
 import { Box, Center } from '@chakra-ui/react';
@@ -21,7 +22,7 @@ export const NavItem = ({ icon, count, to, name }: NavItemP) => {
 
   const {
     actions: { toggleSidebar },
-  } = useSidebar();
+  } = useSidebar() as any;
 
   const active = pathname === to;
   const activeProps: BoxProps = {

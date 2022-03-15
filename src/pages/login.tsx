@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 
 import { Login as AuthLogin } from '@/modules/auth';
 
-const Login: NextPage = (props) => {
+const Login: NextPage = () => {
   return <AuthLogin />;
 };
 

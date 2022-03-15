@@ -4,6 +4,7 @@ import { useBreakpointValue } from '@chakra-ui/media-query';
 import { css } from '@emotion/react';
 import { cloneElement, JSXElementConstructor, useRef } from 'react';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+// eslint-disable-next-line import/no-unresolved
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import * as LC from '@/components/LC';

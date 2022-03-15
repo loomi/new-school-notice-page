@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Dashboard } from '@/modules/dashboard';
 
-const Home: React.FC = (props) => {
+const Home: React.FC = () => {
   return <Dashboard />;
 };
 

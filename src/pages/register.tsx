@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 
 import { Register as AuthRegister } from '@/modules/auth';
 
-const Register: NextPage = (props) => {
+const Register: NextPage = () => {
   return <AuthRegister />;
 };
 
