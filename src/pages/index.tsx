@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-imports */
 import type { NextPage } from 'next';
 
 import { Landing } from '@/modules/misc/pages/Landing';

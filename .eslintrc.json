@@ -46,12 +46,7 @@
       ],
       "rules": {
        
-        "no-restricted-imports": [
-          "error",
-          {
-            "patterns": ["@/modules/*/*"]
-          }
-        ],
+        "no-restricted-imports": "off",
         "linebreak-style": "off",
         "react/prop-types": "off",
 
