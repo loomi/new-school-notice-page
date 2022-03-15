@@ -1,7 +1,8 @@
-import { NextFetchEvent, NextRequest, NextResponse } from 'next/server';
-import { ACCESS_TOKEN_ID, REFRESH_TOKEN_ID } from '@/config';
+import { NextRequest, NextResponse } from 'next/server';
 
-export function middleware(req: NextRequest, ev: NextFetchEvent) {
+import { ACCESS_TOKEN_ID } from '@/config';
+
+export function middleware(req: NextRequest) {
   const accessToken = req.cookies[ACCESS_TOKEN_ID];
 
   if (!accessToken) return NextResponse.redirect(`${req.nextUrl.origin}/login`);

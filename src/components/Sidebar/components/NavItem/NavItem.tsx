@@ -1,11 +1,11 @@
+/* eslint-disable @next/next/link-passhref */
 import Icon from '@chakra-ui/icon';
 import { BoxProps, Spacer, Stack, Text } from '@chakra-ui/layout';
 import { Box, Center } from '@chakra-ui/react';
 import { chakra } from '@chakra-ui/system';
+import Link from 'next/link';
 import { IconType } from 'react-icons';
 import { useLocation } from 'react-router-dom';
-
-import Link from 'next/link';
 
 import { useSidebar } from '../../store/sidebar';
 
@@ -22,7 +22,7 @@ export const NavItem = ({ icon, count, to, name }: NavItemP) => {
 
   const {
     actions: { toggleSidebar },
-  } = useSidebar();
+  } = useSidebar() as any;
 
   const active = pathname === to;
   const activeProps: BoxProps = {
@@ -37,48 +37,48 @@ export const NavItem = ({ icon, count, to, name }: NavItemP) => {
 
   return (
     <Center>
-      <Link href={to || ''}> 
-      <Box ml="auto" mr="auto" w="90%" onClick={handleNavClick}>
-        <Stack
-          direction="row"
-          cursor="pointer"
-          px={6}
-          py={2}
-          w="100%"
-          m="0"
-          spacing={4}
-          alignItems="center"
-          fontWeight="semibold"
-          transition="all .4s ease-in-out"
-          borderRightWidth="3px"
-          borderRightColor="transparent"
-          _hover={activeProps}
-          {...(active && activeProps)}
-        >
-          <Icon as={icon} fontSize="xl" />
-          {/* <LinkOverlay> */}
-          <Text>{name}</Text>
-          {/* </LinkOverlay> */}
-          <Spacer />
-          {count && (
-            <chakra.span
-              display="inline-flex"
-              alignItems="center"
-              justifyContent="center"
-              px={2}
-              py={1}
-              fontSize="xs"
-              fontWeight="bold"
-              lineHeight="none"
-              color="pink.50"
-              bg="pink.500"
-              rounded="full"
-            >
-              {count}
-            </chakra.span>
-          )}
-        </Stack>
-      </Box>
+      <Link href={to || ''}>
+        <Box ml="auto" mr="auto" w="90%" onClick={handleNavClick}>
+          <Stack
+            direction="row"
+            cursor="pointer"
+            px={6}
+            py={2}
+            w="100%"
+            m="0"
+            spacing={4}
+            alignItems="center"
+            fontWeight="semibold"
+            transition="all .4s ease-in-out"
+            borderRightWidth="3px"
+            borderRightColor="transparent"
+            _hover={activeProps}
+            {...(active && activeProps)}
+          >
+            <Icon as={icon} fontSize="xl" />
+            {/* <LinkOverlay> */}
+            <Text>{name}</Text>
+            {/* </LinkOverlay> */}
+            <Spacer />
+            {count && (
+              <chakra.span
+                display="inline-flex"
+                alignItems="center"
+                justifyContent="center"
+                px={2}
+                py={1}
+                fontSize="xs"
+                fontWeight="bold"
+                lineHeight="none"
+                color="pink.50"
+                bg="pink.500"
+                rounded="full"
+              >
+                {count}
+              </chakra.span>
+            )}
+          </Stack>
+        </Box>
       </Link>
     </Center>
   );

@@ -1,9 +1,9 @@
+import { GetServerSideProps } from 'next';
 import React from 'react';
 
-import { GetServerSideProps } from 'next';
 import { Dashboard } from '@/modules/dashboard';
 
-const Home: React.FC = (props) => {
+const Home: React.FC = () => {
   return <Dashboard />;
 };
 

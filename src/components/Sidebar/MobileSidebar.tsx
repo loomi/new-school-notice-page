@@ -10,7 +10,7 @@ export const MobileSidebar = () => {
   const {
     state: { isOpen },
     actions: { toggleSidebar },
-  } = useSidebar();
+  } = useSidebar() as any;
   useEffect(() => {
     const unlisten = history.listen(({ action }) => {
       if (action) toggleSidebar;

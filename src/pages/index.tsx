@@ -1,8 +1,8 @@
-import { Landing } from '@/modules/misc/pages/Landing';
-import type { GetServerSideProps, NextPage } from 'next';
-import { getServerSession } from 'next-auth';
+import type { NextPage } from 'next';
 
-const Home: NextPage = (props) => {
+import { Landing } from '@/modules/misc/pages/Landing';
+
+const Home: NextPage = () => {
   return <Landing />;
 };
 

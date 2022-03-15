@@ -1,10 +1,8 @@
-import { Landing } from '@/modules/misc/pages/Landing';
-import type { GetServerSideProps, NextPage } from 'next';
-import { getServerSession } from 'next-auth';
-import { Login as AuthLogin } from '@/modules/auth';
-import { parseCookies } from 'nookies';
+import type { NextPage } from 'next';
 
-const Login: NextPage = (props) => {
+import { Login as AuthLogin } from '@/modules/auth';
+
+const Login: NextPage = () => {
   return <AuthLogin />;
 };
 
