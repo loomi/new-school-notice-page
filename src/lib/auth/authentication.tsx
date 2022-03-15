@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { Spinner } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 

@@ -48,7 +48,7 @@ authenticatedInstance.interceptors.response.use(
   },
 );
 
-export default {
+const axiosObject = {
   unauthorized() {
     unathenticatedInstance.defaults.baseURL = API_URL;
 
@@ -71,3 +71,5 @@ export default {
     return authenticatedInstance;
   },
 };
+
+export default axiosObject;
