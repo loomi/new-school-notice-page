@@ -7,7 +7,7 @@ export const NavigationSection = () => {
   const { navigation } = useNavigation();
   const {
     state: { isOpen },
-  } = useSidebar();
+  } = useSidebar() as any;
 
   return (
     <>
