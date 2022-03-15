@@ -12,7 +12,7 @@ export const FooterSection = ({ title }: FooterSectionP) => {
   const { footer } = useNavigation();
   const {
     state: { isOpen },
-  } = useSidebar();
+  } = useSidebar() as any;
 
   return (
     <>
