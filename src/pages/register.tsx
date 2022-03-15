@@ -1,7 +1,6 @@
-import { Landing } from '@/modules/misc/pages/Landing';
-import type { GetServerSideProps, NextPage } from 'next';
-import { getServerSession } from 'next-auth';
-import { Register as AuthRegister} from '@/modules/auth';
+import type { NextPage } from 'next';
+
+import { Register as AuthRegister } from '@/modules/auth';
 
 const Register: NextPage = (props) => {
   return <AuthRegister />;

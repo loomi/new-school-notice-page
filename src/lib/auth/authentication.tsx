@@ -1,4 +1,5 @@
 import { Spinner } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 
 import {
   loginWithEmailAndPassword,
@@ -10,8 +11,6 @@ import {
   AuthUser,
 } from '@/modules/auth';
 import { storage, cookies } from '@/utils';
-
-import { useRouter } from 'next/router';
 
 import { initReactQueryAuth } from './context';
 

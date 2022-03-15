@@ -7,6 +7,7 @@ import { LoginForm } from '../components/LoginForm';
 export const Login = () => {
   const toast = useToast();
   const router = useRouter();
+
   return (
     <AuthLayout title="Log in to your account">
       <LoginForm
