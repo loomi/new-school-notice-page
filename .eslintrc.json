@@ -4,7 +4,8 @@
     "es2021": true
   },
   "extends": [
-    "eslint:recommended"
+    "eslint:recommended",
+    "next/core-web-vitals"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -40,17 +41,18 @@
         "plugin:react-hooks/recommended",
         "plugin:jsx-a11y/recommended",
         "plugin:prettier/recommended",
-        "plugin:testing-library/react",
-        "plugin:jest-dom/recommended"
+        "plugin:testing-library/react", 
+        "next"
       ],
       "rules": {
+       
         "no-restricted-imports": [
           "error",
           {
             "patterns": ["@/modules/*/*"]
           }
         ],
-        "linebreak-style": ["error", "unix"],
+        "linebreak-style": "off",
         "react/prop-types": "off",
 
         "no-debugger": "off",
@@ -91,7 +93,8 @@
         "@typescript-eslint/no-empty-function": ["off"],
         "@typescript-eslint/no-explicit-any": ["off"],
 
-        "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
+        "prettier/prettier": ["error", { "usePrettierrc": true,  "endOfLine": "auto"  }]
+      
       }
     }
   ]

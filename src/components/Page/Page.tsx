@@ -1,10 +1,10 @@
 import { Box, Button } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import { ReactNode, useEffect, useRef } from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
 
 import { MotionBox } from '@/components/common/MotionBox';
 import { Head } from '@/components/Head';
-import { useRouter } from 'next/router';
 
 type PageProps = {
   children: ReactNode;
@@ -13,7 +13,7 @@ type PageProps = {
 };
 
 export const Page = ({ children, withBackButton = false, title, ...restProps }: PageProps) => {
-  const router = useRouter()
+  const router = useRouter();
   const pageRef = useRef<HTMLDivElement>(null);
 
   const container = {

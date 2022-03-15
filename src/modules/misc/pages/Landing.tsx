@@ -20,8 +20,6 @@ import * as LC from '@/components/LC';
 export const Landing = () => {
   const sceneEl = useRef(null);
 
-  console.log(reactLeapLetter.src)
-
   useEffect(() => {
     const parallaxInstance = new Parallax(sceneEl.current as any, {
       relativeInput: true,

@@ -1,5 +1,6 @@
 import { NextFetchEvent, NextRequest, NextResponse } from 'next/server';
-import { ACCESS_TOKEN_ID, REFRESH_TOKEN_ID } from '@/config';
+
+import { ACCESS_TOKEN_ID } from '@/config';
 
 export function middleware(req: NextRequest, ev: NextFetchEvent) {
   const accessToken = req.cookies[ACCESS_TOKEN_ID];

@@ -20,7 +20,7 @@ export interface CarouselProps<T> {
   [x: string]: any;
 }
 
-export const Carousel = <T extends unknown>({
+export const Carousel = <T,>({
   data,
   columns = 3,
   title,

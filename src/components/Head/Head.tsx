@@ -1,4 +1,4 @@
-import {default as NextHead}from 'next/head';
+import { default as NextHead } from 'next/head';
 
 type HeadProps = {
   title?: string;
@@ -6,7 +6,7 @@ type HeadProps = {
 };
 
 export const Head = ({ title = '', description = '' }: HeadProps = {}) => {
-  console.log(title)
+  console.log(title);
   return (
     <NextHead>
       <title>{title ? `${title} | Next Leap` : undefined}</title>
