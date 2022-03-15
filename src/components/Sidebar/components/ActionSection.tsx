@@ -12,7 +12,7 @@ export const ActionSection = ({ title }: ActionSectionP) => {
   const { actions } = useNavigation();
   const {
     state: { isOpen },
-  } = useSidebar();
+  } = useSidebar() as any;
 
   return (
     <>
