@@ -57,7 +57,7 @@ async function logoutFn() {
   const router = useRouter();
   storage.clearUser();
   cookies.clearAccess();
-  router.push('/');
+  router.push('/login');
 }
 
 const authConfig = {

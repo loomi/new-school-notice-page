@@ -1,5 +1,4 @@
 import { Button } from '@chakra-ui/react';
-
 import Link from 'next/link';
 
 import { FieldWrapper, Form, TextInput } from '@/components/Form';
@@ -53,7 +52,7 @@ export const LoginForm = ({ onSuccess, onError }: LoginFormProps) => {
           />
 
           <LC.Vertical center spaceBetween>
-            <Link href="../register">
+            <Link href="../register" passHref>
               <Button size="sm" mb={4} variant="ghost">
                 Don&apos;t have an account?
               </Button>

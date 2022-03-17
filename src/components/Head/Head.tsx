@@ -6,7 +6,6 @@ type HeadProps = {
 };
 
 export const Head = ({ title = '', description = '' }: HeadProps = {}) => {
-  console.log(title);
   return (
     <NextHead>
       <title>{title ? `${title} | Next Leap` : undefined}</title>

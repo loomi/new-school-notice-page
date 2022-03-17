@@ -6,7 +6,7 @@ import { IncomesChart } from '../components/IncomesChart';
 
 export const Dashboard = () => {
   return (
-    <Page title="Dashboard">
+    <Page withBackButton title="Dashboard">
       <LC.Horizontal spaceBetween>
         <IncomesChart />
         <ExpensesChart />
