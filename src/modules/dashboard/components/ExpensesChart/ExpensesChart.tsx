@@ -1,32 +1,21 @@
-import _ from 'lodash';
-import { useMemo } from 'react';
-
 import { PieChart } from '@/components/Charts/PieChart';
-import { useExpenses, parseExpenseCategoryLabel, Category } from '@/modules/expenses';
 
 export const ExpensesChart = () => {
-  const expensesQuery = useExpenses({});
-
-  const expensesChartData = useMemo(
-    () =>
-      _.chain(expensesQuery?.data)
-        .groupBy('category')
-        .map((value, key) => ({
-          label: parseExpenseCategoryLabel(key as Category),
-          value: _.reduce(value, (acc, expense) => Number(expense.value) + acc, 0),
-        }))
-        .value(),
-    [expensesQuery.data],
-  );
-
-  console.log(expensesChartData);
-
   return (
     <PieChart
       label="Expenses"
       height={500}
       width={500}
-      data={expensesChartData || []}
+      data={
+        [
+          ...Array(10)
+            .fill(null)
+            .map((_, index) => ({
+              label: `Bar ${index}`,
+              value: index * 5 + 5,
+            })),
+        ] || []
+      }
       legends={[
         {
           anchor: 'bottom',
