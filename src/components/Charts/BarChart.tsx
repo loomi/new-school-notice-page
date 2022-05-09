@@ -27,7 +27,7 @@ export function BarChart<T extends BarDatum>({
       width={width}
     >
       <Text fontSize="lg" fontWeight="bold" mb={5}>
-        {label}
+        {label as any}
       </Text>
       <ResponsiveBar
         data={data}
