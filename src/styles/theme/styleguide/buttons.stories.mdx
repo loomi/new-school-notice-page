@@ -1,13 +1,13 @@
 import { Button, ButtonGroup, IconButton } from '@chakra-ui/react';
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
-import { HiPlus, HiMinus } from 'react-icons/hi'
+import { HiPlus, HiMinus } from 'react-icons/hi';
 
 <Meta title="StyleGuide/Buttons" />
 
 # Buttons
 
 ```jsx
-import { Button, IconButton } from '@chakra-ui/react'
+import { Button, IconButton } from '@chakra-ui/react';
 ```
 
 ## Default Button
@@ -28,7 +28,9 @@ import { Button, IconButton } from '@chakra-ui/react'
   <Story name="Primary">
     <ButtonGroup>
       <Button variant="@primary">Primary Button</Button>
-      <Button variant="@primary" isLoading>Button</Button>
+      <Button variant="@primary" isLoading>
+        Button
+      </Button>
       <IconButton variant="@primary" icon={<HiPlus />} aria-label="Add" />
     </ButtonGroup>
   </Story>
@@ -40,7 +42,9 @@ import { Button, IconButton } from '@chakra-ui/react'
   <Story name="Secondary">
     <ButtonGroup>
       <Button variant="@secondary">Secondary Button</Button>
-      <Button variant="@secondary" isLoading>Button</Button>
+      <Button variant="@secondary" isLoading>
+        Button
+      </Button>
       <IconButton variant="@secondary" icon={<HiPlus />} aria-label="Add" />
     </ButtonGroup>
   </Story>
@@ -52,7 +56,9 @@ import { Button, IconButton } from '@chakra-ui/react'
   <Story name="Danger">
     <ButtonGroup>
       <Button variant="@danger">Danger Button</Button>
-      <Button variant="@danger" isLoading>Button</Button>
+      <Button variant="@danger" isLoading>
+        Button
+      </Button>
       <IconButton variant="@danger" icon={<HiMinus />} aria-label="Remove" />
     </ButtonGroup>
   </Story>
@@ -64,7 +70,9 @@ import { Button, IconButton } from '@chakra-ui/react'
   <Story name="Warning">
     <ButtonGroup>
       <Button variant="@warning">Warning Button</Button>
-      <Button variant="@warning" isLoading>Button</Button>
+      <Button variant="@warning" isLoading>
+        Button
+      </Button>
       <IconButton variant="@warning" icon={<HiMinus />} aria-label="Remove" />
     </ButtonGroup>
   </Story>

@@ -1,7 +1,6 @@
 import { useCallback } from 'react';
 
 import { useAuth } from '@/lib/auth/authentication';
-import { Roles } from '@/types';
 
 export const useRBAC = () => {
   const { user } = useAuth();
@@ -10,16 +9,13 @@ export const useRBAC = () => {
     throw Error('User does not exist!');
   }
 
-  const checkAllowedRole = useCallback(
-    ({ allowedRoles }: { allowedRoles: Roles[] }) => {
-      if (allowedRoles && allowedRoles.length > 0) {
-        return allowedRoles?.includes(user.role);
-      }
+  const checkAllowedRole = useCallback(() => {
+    // if (allowedRoles && allowedRoles.length > 0) {
+    //   return allowedRoles?.includes(user.role);
+    // }
 
-      return true;
-    },
-    [user.role],
-  );
+    return true;
+  }, []);
 
-  return { checkAllowedRole, role: user.role };
+  return { checkAllowedRole, role: '' };
 };

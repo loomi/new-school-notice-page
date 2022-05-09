@@ -1,4 +1,4 @@
-export default {
+const modalStyle = {
   baseStyle: () => ({
     dialog: {
       bg: '#1a1a1cf6',
@@ -6,3 +6,5 @@ export default {
     },
   }),
 };
+
+export default modalStyle;

@@ -1,4 +1,4 @@
-export default {
+const popoverStyle = {
   sizes: {
     '3xs': {
       content: {
@@ -83,3 +83,5 @@ export default {
     },
   },
 };
+
+export default popoverStyle;

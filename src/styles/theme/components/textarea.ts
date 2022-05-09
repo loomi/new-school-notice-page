@@ -1,6 +1,6 @@
 import { mode } from '@chakra-ui/theme-tools';
 
-export default {
+const textareaStyle = {
   variants: {
     outline: (props) => ({
       bg: mode('blackAlpha.50', 'whiteAlpha.50')(props),
@@ -10,3 +10,5 @@ export default {
     variant: 'outline',
   },
 };
+
+export default textareaStyle;

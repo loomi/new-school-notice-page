@@ -1,10 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { Spinner } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 
 import {
   loginWithEmailAndPassword,
-  getUserProfile,
   registerWithEmailAndPassword,
   UserResponse,
   LoginCredentials,
@@ -16,34 +14,29 @@ import { storage, cookies } from '@/utils';
 import { initReactQueryAuth } from './context';
 
 function handleUserResponse(data: UserResponse) {
-  const { accessToken, user, refreshToken } = data;
-  storage.setUser(user);
+  const { accessToken, authUser, refreshToken } = data;
+  storage.setUser(authUser);
   cookies.setAccess(accessToken);
   cookies.setRefresh(refreshToken);
-  return user;
+  return authUser;
 }
 
 async function loadUser() {
-  const user = storage.getUser();
   const access = cookies.getAccess();
+  const user = storage.getUser();
 
-  if (!user || !access) {
+  if (!access || !user) {
     storage.clearUser();
     cookies.clearAccess();
     return null;
   }
 
-  if (user) return user;
-
-  if (access) {
-    const data = await getUserProfile();
-    return data;
-  }
+  return user;
 }
 
 async function loginFn(data: LoginCredentials) {
   const response = await loginWithEmailAndPassword(data);
-  const user = await handleUserResponse(response);
+  const user = handleUserResponse(response);
   return user;
 }
 
@@ -66,7 +59,7 @@ const authConfig = {
   registerFn,
   logoutFn,
   LoaderComponent() {
-    return <Spinner size="xl" />;
+    return <></>;
   },
 };
 

@@ -14,7 +14,7 @@ export const Authorization = ({
   let canAccess = false;
 
   if (allowedRoles) {
-    canAccess = checkAllowedRole({ allowedRoles });
+    canAccess = checkAllowedRole();
   }
 
   if (policies) {

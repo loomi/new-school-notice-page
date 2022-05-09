@@ -1,6 +1,6 @@
 import { Button } from '@chakra-ui/react';
-
 import Link from 'next/link';
+
 import { FieldWrapper, Form, RadioGroup, TextArea, TextInput, Radio } from '@/components/Form';
 import * as LC from '@/components/LC';
 import { useAuth } from '@/lib/auth/authentication';
@@ -88,7 +88,7 @@ export const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
             >
               Register
             </Button>
-            <Link href="../login">
+            <Link href="../login" passHref>
               <Button variant="ghost" mt={4} size="sm">
                 Back to login
               </Button>

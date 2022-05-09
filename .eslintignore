@@ -7,9 +7,13 @@ build
 
 .eslintrc.json
 .prettierrc.json
+react-table-config.d.ts
+
 jsconfig.json
 
 README.md
 
 package.json
 yarn.lock
+
+.next

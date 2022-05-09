@@ -4,7 +4,14 @@ import { Box, HStack, useColorModeValue } from '@chakra-ui/react';
 <Meta title="StyleGuide/Shadows" />
 
 export const Shadow = ({ boxShadow, ...rest }) => (
-  <Box px="4" py="2" bg={useColorModeValue('white', 'gray.900')} borderRadius="md" boxShadow={boxShadow} {...rest}>
+  <Box
+    px="4"
+    py="2"
+    bg={useColorModeValue('white', 'gray.900')}
+    borderRadius="md"
+    boxShadow={boxShadow}
+    {...rest}
+  >
     {boxShadow}
   </Box>
 );

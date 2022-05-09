@@ -1,7 +1,8 @@
+/* eslint-disable prettier/prettier */
 import axiosInstance, { AxiosError } from 'axios';
 
 import { API_URL } from '@/config';
-import { cookies, storage } from '@/utils';
+import { cookies, nodeCookies, storage } from '@/utils';
 
 const config = {
   baseURL: API_URL,
@@ -29,7 +30,7 @@ authenticatedInstance.interceptors.response.use(
       }
 
       return axiosInstance
-        .post('/api/refresh_token', {
+        .post('/auth/refresh-token', {
           refresh_token: cookies.getRefresh(),
         })
         .then((response) => {
@@ -54,8 +55,10 @@ const axiosObject = {
 
     return unathenticatedInstance;
   },
-  authorized() {
-    authenticatedInstance.defaults.headers.common.Authorization = `Bearer ${cookies.getAccess()}`;
+  authorized(ctx?: any) {
+    const accessToken = ctx ? nodeCookies(ctx).getAccess() : cookies.getAccess();
+
+    authenticatedInstance.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
 
     authenticatedInstance.interceptors.request.use(
       function (config) {

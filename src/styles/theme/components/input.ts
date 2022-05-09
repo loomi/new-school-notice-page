@@ -1,7 +1,9 @@
-export default {
+const inputStyle = {
   baseStyle: () => ({
     field: {
-      bg: 'whiteAlpha.50',
+      bg: 'secondary.200',
     },
   }),
 };
+
+export default inputStyle;

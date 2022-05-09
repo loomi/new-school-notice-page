@@ -1,10 +1,12 @@
-export default {
+const selectStyle = {
   baseStyle: {
     field: {
       borderColor: 'whiteAlpha.100',
       '> option, > optgroup': {
-        bg: 'gray.700',
+        bg: 'white.400',
       },
     },
   },
 };
+
+export default selectStyle;
