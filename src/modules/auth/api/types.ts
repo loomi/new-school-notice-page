@@ -26,14 +26,11 @@ export type UpdateCredentials = {
 export type AuthUser = {
   id: string;
   email: string;
-  firstName: string;
-  lastName: string;
-  bio?: string;
-  role: Roles;
+  name: string;
 };
 
 export type UserResponse = {
   accessToken: string;
-  user: AuthUser;
+  authUser: AuthUser;
   refreshToken: string;
 };

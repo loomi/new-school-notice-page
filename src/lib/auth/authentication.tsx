@@ -15,7 +15,7 @@ import { initReactQueryAuth } from './context';
 
 function handleUserResponse(data: UserResponse) {
   const { accessToken, authUser, refreshToken } = data;
-  storage.setUser(authUser);
+  storage.setUser(authUser || {});
   cookies.setAccess(accessToken);
   cookies.setRefresh(refreshToken);
   return authUser;
