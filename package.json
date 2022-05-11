@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint .",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "husky-init": "husky install && husky add .husky/pre-commit \"yarn type-check && yarn lint && yarn prettier --write .\""
+    "husky-init": "husky install && husky set .husky/pre-commit \"yarn type-check && yarn lint && yarn prettier --write .\""
   },
   "dependencies": {
     "@chakra-ui/react": "^1.8.6",
