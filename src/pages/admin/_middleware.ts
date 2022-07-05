@@ -1,11 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-import { ACCESS_TOKEN_ID } from '@/config';
+import { ACCESS_TOKEN_ID, MOCK_ENABLED } from '@/config';
 
 export function middleware(req: NextRequest) {
-  const accessToken = req.cookies[ACCESS_TOKEN_ID];
+  if (MOCK_ENABLED === 'true') {
+    return NextResponse.next();
+  } else {
+    const accessToken = req.cookies[ACCESS_TOKEN_ID];
 
-  if (!accessToken) return NextResponse.redirect(`${req.nextUrl.origin}/login`);
+    if (!accessToken) return NextResponse.redirect(`${req.nextUrl.origin}/login`);
 
-  return;
+    return NextResponse.next();
+  }
 }

@@ -6,6 +6,7 @@ export const API_URL = process.env.NEXT_PUBLIC_AUTH_URL as string;
 export const MOCK_API_URL = process.env.REACT_APP_MOCK_API_URL as string;
 
 export const ENVIROMENT = process.env.NODE_ENV;
+export const MOCK_ENABLED = process.env.NEXT_PUBLIC_API_MOCKING as string;
 
 export const DEFAULT_PUBLIC_PAGE = '/entrar';
 
@@ -21,3 +22,5 @@ export const JWT_ACCESS_SECRET = '123456' as string;
 export const JWT_ACCESS_EXPIRES_IN = 10;
 export const JWT_REFRESH_SECRET = '123456789' as string;
 export const JWT_REFRESH_EXPIRES_IN = 50;
+
+export const IS_CLIENT_SERVER = typeof window !== 'undefined';
