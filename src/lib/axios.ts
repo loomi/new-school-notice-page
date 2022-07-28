@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import axiosInstance, { AxiosError } from 'axios';
 
-import { API_URL } from '@/config';
+import { API_URL, IS_CLIENT_SERVER } from '@/config';
 import { cookies, nodeCookies, storage } from '@/utils';
 
 const config = {
@@ -13,6 +13,23 @@ const config = {
 
 const unathenticatedInstance = axiosInstance.create(config);
 const authenticatedInstance = axiosInstance.create(config);
+
+export const mockAPI = (ctx: any) => {
+  const host = ctx?.req?.headers?.host;
+  const protocol = IS_CLIENT_SERVER && window.location.protocol;
+  const hostClient = IS_CLIENT_SERVER && window.location.host;
+
+  const baseUrl =
+    host && host.includes('localhost') && !IS_CLIENT_SERVER
+      ? `http://${host}/api/`
+      : IS_CLIENT_SERVER
+      ? `${protocol}//${hostClient}/api/`
+      : `https://${host}/api/`;
+
+  return axiosInstance.create({
+    baseURL: baseUrl,
+  });
+};
 
 unathenticatedInstance.interceptors.response.use(
   (response) => response?.data,

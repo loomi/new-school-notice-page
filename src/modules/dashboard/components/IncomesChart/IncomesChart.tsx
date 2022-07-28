@@ -1,22 +1,10 @@
-import { BarChart } from '@/components/Charts';
+import React from 'react';
 
-export const IncomesChart = () => {
+import { BarChart } from '@/components/Charts';
+export const IncomesChart: React.FC<{ incomesData: any[] }> = ({ incomesData }) => {
   return (
     <>
-      <BarChart
-        label="Incomes"
-        height={500}
-        width={500}
-        indexBy="label"
-        data={[
-          ...Array(10)
-            .fill(null)
-            .map((_, index) => ({
-              label: `Bar ${index}`,
-              value: index * 5 + 5,
-            })),
-        ]}
-      />
+      <BarChart height={500} width={800} data={incomesData} />
     </>
   );
 };
