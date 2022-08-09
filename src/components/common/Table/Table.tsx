@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-case-declarations */
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 import {

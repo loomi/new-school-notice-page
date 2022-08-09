@@ -12,11 +12,11 @@ export const DEFAULT_PUBLIC_PAGE = '/entrar';
 
 export const DEFAULT_PRIVATE_PAGE = '/';
 
-export const ACCESS_TOKEN_ID = 'next-leap_access';
-export const REFRESH_TOKEN_ID = 'next-leap_refresh';
-export const USER_INFO_ID = 'next-leap_user-info';
+export const ACCESS_TOKEN_ID = 'new_school_access';
+export const REFRESH_TOKEN_ID = 'new_school_refresh';
+export const USER_INFO_ID = 'new_school_user-info';
 
-export const MSW_DB = 'next-leap_msw-db';
+export const MSW_DB = 'new_school_msw-db';
 
 export const JWT_ACCESS_SECRET = '123456' as string;
 export const JWT_ACCESS_EXPIRES_IN = 10;

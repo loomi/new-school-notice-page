@@ -1,14 +1,13 @@
-import { mode, GlobalStyleProps } from '@chakra-ui/theme-tools';
-
 export const styles = {
-  global: (props: GlobalStyleProps) => ({
+  global: () => ({
     html: {
-      bg: mode('whiteAlpha.600', 'gray.800')(props),
+      bg: 'purple.500',
       minH: '100vh',
     },
     body: {
-      bg: mode('whiteAlpha.600', 'gray.800')(props),
+      bg: 'purple.500',
       h: '100%',
+      color: 'white.500',
       WebkitTapHighlightColor: 'transparent',
     },
     '#chakra-toast-portal > *': {
