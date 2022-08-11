@@ -5,10 +5,8 @@ import tailwindColors from './tailwindColors';
 export const colors = {
   ...theme.colors,
   ...tailwindColors,
-  purple: {
-    500: '#661DAC',
-  },
-  white: {
-    500: '#F5F5F5',
+  pink: {
+    500: '#AA186B',
+    550: '#8f145a',
   },
 };

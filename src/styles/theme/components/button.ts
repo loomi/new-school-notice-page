@@ -67,16 +67,13 @@ const buttonStyle = {
       }),
 
     // Default variants
-    solid: (props) => ({
-      bg:
-        props.colorScheme === 'gray'
-          ? mode('gray.100', 'whiteAlpha.100')(props)
-          : `${props.colorScheme}.600`,
+    solid: () => ({
+      minW: '120px',
+      bg: 'pink.500',
+      borderRadius: '50px',
+      fontWeight: '500',
       _hover: {
-        bg:
-          props.colorScheme === 'gray'
-            ? mode('gray.200', 'whiteAlpha.200')(props)
-            : `${props.colorScheme}.700`,
+        bg: 'pink.550',
       },
     }),
     ghost: (props) => ({

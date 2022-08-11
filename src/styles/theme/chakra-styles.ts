@@ -1,13 +1,13 @@
 export const styles = {
   global: () => ({
     html: {
-      bg: 'purple.500',
+      bg: 'white',
       minH: '100vh',
     },
     body: {
-      bg: 'purple.500',
+      bg: 'white',
       h: '100%',
-      color: 'white.500',
+      color: 'white',
       WebkitTapHighlightColor: 'transparent',
     },
     '#chakra-toast-portal > *': {

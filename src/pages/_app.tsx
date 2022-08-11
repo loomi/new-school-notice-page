@@ -5,7 +5,7 @@ import { QueryClientProvider } from 'react-query';
 
 import { AuthProvider } from '@/lib/auth/authentication';
 import { queryClient } from '@/lib/react-query';
-import { Fonts, theme } from '@/styles';
+import { theme } from '@/styles';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         ...theme,
       }}
     >
-      <Fonts />
+     
       <QueryClientProvider client={queryClient}>
         <AuthProvider>
           <Component {...pageProps} />

@@ -1,19 +1,18 @@
-/* eslint-disable jsx-a11y/accessible-emoji */
-import { Heading } from '@chakra-ui/react';
-import Image from 'next/image';
-
-import whiteLogo from '@/assets/logoBranco.png';
+import { Banner } from '@/components/Banner';
+import { Footer } from '@/components/Footer';
 import { Head } from '@/components/Head';
 import * as LC from '@/components/LC';
+import { Pathers } from '@/components/Pathers';
 
 export const Landing = () => {
   return (
     <>
-      <Head title="New school" description="Em construção..." />
-      <LC.Vertical minH="100vh" center>
-        <Image src={whiteLogo} alt="logo cor branco" />
-        <Heading as="h3">Novo site em construção</Heading>
+      <Head title="anima" description="tech week experience" />
+      <LC.Vertical minH="100vh" center as="main">
+        <Banner />
+        <Pathers />
       </LC.Vertical>
+      <Footer />
     </>
   );
 };
